@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>csk to stt</title>
+<title>csk TO stt</title>
 
 <style>
 /* basic styles for black background and crosshair cursor */
@@ -243,11 +243,42 @@ function loop() {
 	// lighter creates bright highlight points as the fireworks and particles overlap each other
 	ctx.globalCompositeOperation = 'lighter';
 	
-    var text = "HAPPY 5.20, Dear TT!! ";  
+  var text = "HAPPY 5.20, Dear TT!!";  
   ctx.font = "50px sans-serif";
   var textData = ctx.measureText(text);
-  ctx.fillStyle = "rgba("+parseInt(random(0,255))+","+parseInt(random(0,255))+","+parseInt(random(0,255))+",0.3)";
+  ctx.fillStyle = "rgba("+parseInt(random(0,255))+","+parseInt(random(0,255))+","+parseInt(random(0,255))+",0.35)";
   ctx.fillText(text,cw /2-textData.width/2,ch/2); 
+
+  var text1 = "-- from csk";  
+  ctx.font = "22px sans-serif";
+  var textData1 = ctx.measureText(text1);
+  ctx.fillStyle = "rgba("+parseInt(random(200,255))+","+parseInt(random(100,255))+","+parseInt(random(100,255))+",0.5)";
+  ctx.fillText(text1,cw /2-textData1.width/2+250,ch/2+280); 
+
+  var text2 = "缬眼容光忆见初，";  
+  var textData2 = ctx.measureText(text2);
+  ctx.fillStyle = "rgba("+parseInt(random(50,100))+","+parseInt(random(100,255))+","+parseInt(random(100,255))+",0.3)";
+  ctx.fillText(text2,cw /2-textData2.width/2,ch/2-250); 
+
+  var text3 = "蔷薇新瓣浸醍醐。";  
+  var textData3 = ctx.measureText(text3);
+  ctx.fillStyle = "rgba("+parseInt(random(100,150))+","+parseInt(random(100,255))+","+parseInt(random(100,255))+",0.3)";
+  ctx.fillText(text3,cw /2-textData3.width/2,ch/2-200); 
+
+  var text4 = "不知腆洗儿时面，";  
+  var textData4 = ctx.measureText(text4);
+  ctx.fillStyle = "rgba("+parseInt(random(150,200))+","+parseInt(random(100,255))+","+parseInt(random(100,255))+",0.3)";
+  ctx.fillText(text4,cw /2-textData4.width/2,ch/2-150); 
+
+  var text5 = "曾取红花和雪无？";  
+  var textData5 = ctx.measureText(text5);
+  ctx.fillStyle = "rgba("+parseInt(random(200,255))+","+parseInt(random(100,255))+","+parseInt(random(100,255))+",0.3)";
+  ctx.fillText(text5,cw /2-textData5.width/2,ch/2-100); 
+
+  var image = new Image();
+  image.src = './imgs/1234.gif'
+  ctx.drawImage(image,cw /2-100,ch/2+50,240,240);
+
   
 	// loop over each firework, draw it, update it
 	var i = fireworks.length;
